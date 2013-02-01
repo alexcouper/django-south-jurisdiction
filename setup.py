@@ -4,7 +4,7 @@ from distutils.core import setup
 from south_jurisdiction import __version__
 
 setup(
-    name='South Jurisdiction',
+    name='south_jurisdiction',
     version=__version__,
     description='South Jurisdiction: South Migrations contained for Django',
     long_description=open('README.md').read(),
