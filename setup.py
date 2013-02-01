@@ -7,7 +7,7 @@ setup(
     name='south_jurisdiction',
     version=__version__,
     description='South Jurisdiction: South Migrations contained for Django',
-    long_description=open('README.md').read(),
+    long_description=open('README').read(),
     author='Alex Couper',
     author_email='amcouper@gmail.com',
     url='https://github.com/alexcouper/django-south-jurisdiction/',
@@ -25,8 +25,5 @@ setup(
         'south_jurisdiction',
     ],
     install_requires=['south'],
-    package_data={
-        '': ['*.md'],
-    },
 
 )
