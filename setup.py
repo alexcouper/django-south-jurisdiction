@@ -26,6 +26,8 @@ setup(
     ],
     packages=[
         'south_jurisdiction',
+        'south_jurisdiction.management',
+        'south_jurisdiction.management.commands',
     ],
     install_requires=['south'],
 
