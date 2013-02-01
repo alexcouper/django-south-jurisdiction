@@ -1,8 +1,8 @@
 south-jurisdiction
 ==================
 
-# Motivation
-
+Motivation
+----------
 South isn't great at handling differing requirements from multiple databases
 in a django application.
 
@@ -40,7 +40,8 @@ stands, ``south`` fails at this because the first thing it does is see if there
 are any migrations in the database by looking at the south_migration_history
 table. Because syncdb didn't create this you get FAILURE.
 
-# Solution
+Solution
+--------
 
 South jurisdiction introduces a new setting to the django settings module::
 
@@ -54,7 +55,8 @@ south to manage. In the above example it would read::
 Any attempt to migrate on a database not included in SOUTH_MANAGED_DBS is
 rejected gracefully.
 
-# Configuration
+Configuration
+-------------
 
  - Add ``"south_jurisdiction"`` to ``INSTALLED_APPS`` in your settings, after
    the ``"south"`` app.

@@ -24,4 +24,9 @@ setup(
     packages=[
         'south_jurisdiction',
     ],
+    install_requires=['south'],
+    package_data={
+        '': ['*.md'],
+    },
+
 )
