@@ -1,13 +1,16 @@
 #!/usr/bin/python
 
+from os.path import abspath, dirname, join
 from setuptools import setup
 from south_jurisdiction import __version__
+
+long_description = open(join(dirname(abspath(__file__)), 'README'))
 
 setup(
     name='south_jurisdiction',
     version=__version__,
     description='South Jurisdiction: South Migrations contained for Django',
-    long_description=open('README').read(),
+    long_description=long_description,
     author='Alex Couper',
     author_email='amcouper@gmail.com',
     url='https://github.com/alexcouper/django-south-jurisdiction/',
