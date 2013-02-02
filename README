@@ -55,6 +55,9 @@ south to manage. In the above example it would read::
 Any attempt to migrate on a database not included in SOUTH_MANAGED_DBS is
 rejected gracefully.
 
+If this setting is not included in your django settings module then all
+databases will be looked at for migration as normal.
+
 Configuration
 -------------
 

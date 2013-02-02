@@ -9,7 +9,7 @@ long_description = open(join(dirname(abspath(__file__)), 'README')).read()
 setup(
     name='south_jurisdiction',
     version=__version__,
-    description='South Migrations with database jurisdictions for Django',
+    description='South migrations with database jurisdictions for Django',
     long_description=long_description,
     author='Alex Couper',
     author_email='amcouper@gmail.com',

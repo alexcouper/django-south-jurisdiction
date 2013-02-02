@@ -7,12 +7,20 @@ except ImportError:
     import sys
     sys.exit()
 
+ALL = 'Migrate all the things!'
+
 
 class Command(migrate.Command):
 
     def handle(self, *args, **kwargs):
+        """Call migrate if the db is a SOUTH_MANAGED_DBS.
+
+        If SOUTH_MANAGED_DBS has not beeen set in django.conf.settings, then
+        the call to migrate goes ahead.
+        """
         db = kwargs['database']
-        if db in settings.SOUTH_MANAGED_DBS:
+        south_managed_dbs = getattr(settings, 'SOUTH_MANAGED_DBS', ALL)
+        if db in south_managed_dbs or south_managed_dbs == ALL:
             print ("Managed db '{0}' is getting migrated...".format(db))
             super(Command, self).handle(*args, **kwargs)
         else:
