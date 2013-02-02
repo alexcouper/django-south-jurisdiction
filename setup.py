@@ -4,12 +4,12 @@ from os.path import abspath, dirname, join
 from setuptools import setup
 from south_jurisdiction import __version__
 
-long_description = open(join(dirname(abspath(__file__)), 'README'))
+long_description = open(join(dirname(abspath(__file__)), 'README')).read()
 
 setup(
     name='south_jurisdiction',
     version=__version__,
-    description='South Jurisdiction: South Migrations contained for Django',
+    description='South Migrations with database jurisdictions for Django',
     long_description=long_description,
     author='Alex Couper',
     author_email='amcouper@gmail.com',
